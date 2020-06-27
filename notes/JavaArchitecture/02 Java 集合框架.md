@@ -692,7 +692,7 @@ size 这个字段其实很好理解，就是 HashMap 中实际存在的键值对
 | ------------------- | ------------------------------------------------------------ |
 | buckets             | 在 HashMap 的注释里使用哈希桶来形象的表示数组中每个地址位置。注意这里并不是数组本身，数组是装哈希桶的，他可以被称为**哈希表**。 |
 | capacity            | table 的容量大小，默认为 16。需要注意的是 capacity 必须保证为 2 的 n 次方。 |
-| size                | table 的实际使用量。                                         |
+| size                | table 的实际使用量（The number of key-value mappings contained in this map.）。                                         |
 | threshold           | size 的临界值，size 必须小于 threshold，如果大于等于，就必须进行扩容操作。 |
 | loadFactor          | 装载因子，table 能够使用的比例，threshold = capacity * loadFactor。 |
 | TREEIFY_THRESHOLD   | 树化阀值，哈希桶中的节点个数大于该值（默认为8）的时候将会被转为红黑树行存储结构。 |
